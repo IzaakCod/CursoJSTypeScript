@@ -2,8 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Colaborador = exports.Empresa = void 0;
 class Empresa {
+    // readonly serve para dizer que o atributo não
+    // pode ser alterado, só podendo ser lido!!!
+    nome; // public não necessário
+    _colaboradores = [];
+    cnpj;
     constructor(nome, cnpj) {
-        this._colaboradores = [];
         this.nome = nome;
         this.cnpj = cnpj;
     }
@@ -21,6 +25,8 @@ class Empresa {
 exports.Empresa = Empresa;
 // Modo simplificado 
 class Colaborador {
+    nome;
+    sobrenome;
     constructor(nome, sobrenome) {
         this.nome = nome;
         this.sobrenome = sobrenome;
@@ -36,3 +42,4 @@ empresa1.adicionaColaborador(colaborador2);
 empresa1.adicionaColaborador(colaborador3);
 console.log(empresa1, empresa1.nome);
 // empresa1.mostrarColaboradores()
+//# sourceMappingURL=293-Classes-em-TS-Moldes-para-objetos.js.map
